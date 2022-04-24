@@ -30,4 +30,26 @@ Constraints:
 nums contains distinct values sorted in ascending order.
 -104 <= target <= 104
  */
-const searchInsert = function (nums, target) {};
+
+
+const searchInsert = function (nums, target) {
+
+   const indexOfTarget =  nums.findIndex(value => value == target)
+
+   if(indexOfTarget !== -1) return indexOfTarget;
+
+   else{
+    let iftargetInserted= nums.findIndex(value => value > target);
+
+    return iftargetInserted;
+   }
+     
+ }
+
+console.log(searchInsert([1,3,5,6],4));
+
+module.exports = searchInsert;
+
+
+
+

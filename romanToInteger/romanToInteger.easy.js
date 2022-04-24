@@ -40,4 +40,37 @@ Output: 1994
 Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
  */
 
-const romanToInt = function (s) {};
+const romanToInt = function (s) {
+   
+    const symbol = {
+                            
+        'I' : 1,
+        'V' : 5,
+        'X' : 10,
+        'L' : 50,
+        'C' : 100,
+        'D' : 500,
+        'M' : 1000,
+}
+    let   arrString = s.split("")
+    
+    let decimalnumber =0 ;
+
+            for (let i = 0; i < arrString.length; i++) {
+
+                if (arrString[i] in symbol){
+
+                    if (symbol[arrString[i]] < symbol[arrString[i+1]]){
+                        (decimalnumber += symbol[arrString[i+1]] - symbol[arrString[i]]);
+                        i++;
+                    }
+                    
+                else{decimalnumber += symbol[arrString[i]];}    
+
+                }       
+            }
+            return decimalnumber;
+
+};
+
+console.log(romanToInt("MCMXCIV"))
