@@ -16,6 +16,19 @@
  *
  */
 
-const longestCommonPrefix = function (strs) {};
+const longestCommonPrefix = function (strs) {
+
+    for (let i = 0; i < strs.length; i++) {
+
+        
+        
+        
+    }
+
+
+
+
+
+};
 
 module.exports = longestCommonPrefix;
