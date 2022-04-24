@@ -15,20 +15,27 @@
  * Output: ""
  *
  */
-
+              
 const longestCommonPrefix = function (strs) {
 
-    for (let i = 0; i < strs.length; i++) {
+        let reslt = [], chekLetters = true;
 
-        
-        
-        
-    }
+    for (let i = 0; i < strs[0].length; i++) {
 
+        for (let j = 1; j < strs.length; j++) {
 
+            if (strs[0][i]!=strs[j][i]){
+                chekLetters = false; 
+                break;}
+        }
+            if (chekLetters == false) break;
 
-
+                    reslt.push(strs[0][i])
 
 };
+                            return reslt;}
+
+console.log(longestCommonPrefix(["dog","racecar","car"]));
+console.log(longestCommonPrefix(["flower","flow","flight"]));
 
 module.exports = longestCommonPrefix;
